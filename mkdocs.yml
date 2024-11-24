@@ -1,0 +1,149 @@
+site_name: Sheffield CompSci 2024
+site_url: https://shefcs2024.github.io/
+site_author: Jack Gledhill
+site_description: >-
+  A handbook for the 2024 cohort of Computer Science students at the University of Sheffield.
+
+copyright: Copyright &copy; 2024 Jack Gledhill
+
+repo_url: https://github.com/shefcs2024/website
+repo_name: shefcs2024/website
+edit_uri: edit/main/docs/
+
+nav:
+  - Home:
+      - Welcome: index.md
+      - Quiet Places: quiet-places.md
+  - Student Voice:
+      - SU Officers: student-voice/su-officers.md
+      - SU Council: student-voice/su-council.md
+      - SSLCom: student-voice/sslcom.md
+      - SocCom: student-voice/soccom.md
+      - Technology Group: student-voice/tech-group.md
+  - Help & Support:
+      - Academic Support:
+          - Personal Tutors: support/tutors.md
+          - Disability Support: support/ddss.md
+
+      - Health & Wellbeing:
+          - Wellbeing Service: support/wellbeing.md
+          - Health Service: support/uhs.md
+          - Counselling & Therapy: support/counselling.md
+
+      - Financial Support:
+          - Bursaries: support/bursaries.md
+          - Scholarships: support/scholarships.md
+          - Hardship Fund: support/hardship.md
+  - Socities & Events:
+      - Societies:
+          - CompSoc
+          - Women in CS
+          - Ethical Hacking Society
+          - Game Development
+          - TechVision
+          - Data Science Society
+      - Events:
+          - HackSheffield
+          - ShefJam
+
+plugins:
+  - search
+  - git-authors
+  - git-committers:
+      repository: shefcs2024/website
+      branch: main
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+markdown_extensions:
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.blocks.caption
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.snippets
+  - abbr
+
+extra_javascript:
+  - js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.action.edit
+    - content.action.view
+    - search.suggest
+    - search.highlight
+    - search.share
+    - tags
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: black
+      accent: indigo
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: black
+      accent: indigo
+  icon:
+    edit: material/pencil 
+    view: material/eye
+    repo: fontawesome/brands/github
+
+extra:
+  version:
+    provider: mike
