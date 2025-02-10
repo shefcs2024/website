@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Sheffield CompSci 2024
-site_url: https://shefcs2024.github.io/
+site_url: https://shefcs2024.github.io/website
 site_author: Sheffield CS 2024 Sudoers
 site_description: >-
   A handbook for the 2024 cohort of Computer Science students at the University of Sheffield.
@@ -142,7 +142,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
-          - overrides/.icons
+          #- overrides/.icons
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
