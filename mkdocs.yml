@@ -77,7 +77,6 @@ nav:
 plugins:
   - search # Site search
   # Git metadata
-  - git-authors
   - git-committers:
       repository: shefcs2024/website
       branch: main
