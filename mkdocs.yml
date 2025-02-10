@@ -1,53 +1,82 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Sheffield CompSci 2024
 site_url: https://shefcs2024.github.io/
-site_author: Jack Gledhill
+site_author: Sheffield CS 2024 Sudoers
 site_description: >-
   A handbook for the 2024 cohort of Computer Science students at the University of Sheffield.
 
-copyright: Copyright &copy; 2024 Jack Gledhill
-
+# Repository information, shown in right side of navbar
 repo_url: https://github.com/shefcs2024/website
 repo_name: shefcs2024/website
 edit_uri: edit/main/docs/
 
+# Site navigation, contains all the pages users can view
 nav:
   - Home:
-      - Welcome: index.md
-      - Quiet Places: quiet-places.md
-  - Student Voice:
-      - SU Officers: student-voice/su-officers.md
-      - SU Council: student-voice/su-council.md
-      - SSLCom: student-voice/sslcom.md
-      - SocCom: student-voice/soccom.md
-      - Technology Group: student-voice/tech-group.md
+    - Index: index.md
+
+  - Community:
+      - Index: community/index.md
+      - Code of Conduct: community/coc.md
+      - Sudoers: community/sudoers.md
+      - Game Servers: community/games.md
+
+  - Modules:
+    - First Year:
+      - COM1001: modules/2024/com1001.md
+      - COM1002: modules/2024/com1002.md
+      - COM1003: modules/2024/com1003.md
+      - COM1005: modules/2024/com1005.md
+      - COM1006: modules/2024/com1006.md
+      - COM1008: modules/2024/com1008.md
+      - COM1009: modules/2024/com1009.md
+
   - Help & Support:
-      - Academic Support:
-          - Personal Tutors: support/tutors.md
-          - Disability Support: support/ddss.md
+    - Academic Support:
+      - SCS Reception: support/academic/reception.md
+      - Personal Tutors: support/academic/tutors.md
+      - Disability Support: support/academic/ddss.md
+      - 301 & MASH: support/academic/301.md
 
-      - Health & Wellbeing:
-          - Wellbeing Service: support/wellbeing.md
-          - Health Service: support/uhs.md
-          - Counselling & Therapy: support/counselling.md
+    - Health & Wellbeing:
+      - Wellbeing Service: support/health/wellbeing.md
+      - Health Service: support/health/uhs.md
+      - Counselling & Therapy: support/health/counselling.md
 
-      - Financial Support:
-          - Bursaries: support/bursaries.md
-          - Scholarships: support/scholarships.md
-          - Hardship Fund: support/hardship.md
-  - Socities & Events:
-      - Societies:
-          - CompSoc
-          - Women in CS
-          - Ethical Hacking Society
-          - Game Development
-          - TechVision
-          - Data Science Society
-      - Events:
-          - HackSheffield
-          - ShefJam
+    - Financial Support:
+      - Bursaries: support/financial/bursaries.md
+      - Scholarships: support/financial/scholarships.md
+      - Hardship Fund: support/financial/hardship.md
 
+    - Study Tips:
+      - iForge: support/tips/iforge.md
+      - Meeting Rooms: support/tips/meeting-rooms.md
+      - Quiet Places: support/tips/quiet-places.md
+
+  - Making Change:
+    - SSLCom: change/sslcom.md
+    - SU Council: change/council.md
+    - SU Officers: change/officers.md
+    - SocCom: change/soccom.md
+
+  - Activities:
+    - Technical Services Committee: activities/tsc.md
+    - Societies:
+      - CompSoc:
+        - Index: activities/societies/compsoc/index.md
+        - HackSheffield: activities/societies/compsoc/hacksheffield.md
+        - ShefJam: activities/societies/compsoc/shefjam.md
+      - Women in CS: activities/societies/swics.md
+      - Ethical Hacking: activities/societies/shefesh.md
+      - Game Development: activities/societies/gamedev.md
+      - Data Science: activities/societies/datasoc.md
+      - TechVision: activities/societies/techvision.md
+      - Other Societies: activities/societies/others.md
+
+# Plugins and extensions used
 plugins:
-  - search
+  - search # Site search
+  # Git metadata
   - git-authors
   - git-committers:
       repository: shefcs2024/website
@@ -56,19 +85,64 @@ plugins:
       type: date
       enable_creation_date: true
       fallback_to_build_date: true
+  # External resources are downloaded during build
+  - privacy
+  # RSS feed for blog posts
+  - rss:
+      match_path: ./posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+  - blog:
+      blog_dir: .
+      blog_toc: true
+      post_excerpt_max_authors: 5
+      post_excerpt_max_categories: 5
+  - glightbox: # Image zoom
+      background: none
+      shadow: false
 
+# Extensions for markdown on pages
 markdown_extensions:
   - footnotes
   - admonition
-  - pymdownx.details
   - attr_list
   - md_in_html
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
+  - tables
+  - def_list
+  - abbr
+  - toc:
+      permalink: true
+  - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.blocks.caption
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+        - includes/definitions.md
+        - includes/links.md
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -76,32 +150,25 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-  - tables
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.blocks.caption
-  - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.snippets
-  - abbr
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
 
+# Additional JavaScript
 extra_javascript:
-  - js/mathjax.js
+  # Used for Mathjax plugin
+  - assets/js/mathjax.js
+  # Allows sorting tables by a column
+  - assets/js/tablesort.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 theme:
   name: material
-  logo: assets/logo.png
-  favicon: assets/logo.png
+  logo: assets/images/logo.png
+  favicon: assets/images/logo.png
+  custom_dir: overrides
+
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -114,10 +181,13 @@ theme:
     - toc.follow
     - content.action.edit
     - content.action.view
+    - content.tooltips
     - search.suggest
     - search.highlight
     - search.share
     - tags
+    - announce.dismiss
+
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -129,21 +199,35 @@ theme:
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
-      primary: black
-      accent: indigo
+      primary: teal
+      accent: teal
 
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-      primary: black
-      accent: indigo
+      primary: teal
+      accent: teal
+
+  # Updating the icons used for certain actions
   icon:
     edit: material/pencil 
     view: material/eye
     repo: fontawesome/brands/github
+    annotation: material/information
 
 extra:
-  version:
-    provider: mike
+  # Social media links on footer
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/shefcs2024/website
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/3BqQ5P8Cw4
+
+# Copyright notice, shown in footer
+copyright: >
+  Copyright &copy; 2024 Sheffield CS 2024 Sudoers
+
+watch:
+  - includes

@@ -6,7 +6,7 @@ For most people, this is probably fine, but some of us prefer quieter atmosphere
 
 ## Committee Central
 
-
+Committee Central is located on Level 2 of the SU. Historically, it was a meeting place for Committees. In fact, the safe there used to hold all the societies' money. It has plenty of tables, a couple sofas and some pretty comfy décor. 
 
 ## 38 Mappin Street
 
@@ -14,10 +14,19 @@ For most people, this is probably fine, but some of us prefer quieter atmosphere
 
 Unfortunately, students can't book rooms in 38 Mappin Street. So, you'll have to try your luck and hope there's an unbooked room that hasn't already been claimed by someone with the same idea as you!
 
-??? tip
+!!! tip
     All of the rooms have a display outside them to show if/when it's booked for the day, but most of these don't work (#BlameTheUni).
 
-## SoCS Social Space
+## SCS Social Space
+
+Regent Court is home to the School of Computer Science. There is a (relatively small) social space on Level 2 of Regent Court, just across from the SCS Reception, that has a handful of tables, some sofas, a meeting room, and even a piano!
+
+!!! tip
+    You can book the meeting room by following the instructions [here](/docs/support/tipsort/tips/meeting-rooms.md).
+
 ## Western Bank Library
 
+Not many people know about Western Bank. It used to be the University's main library, before Information Commons was opened in 2007[^2]. Outside of busy times, like exam season and the end of the Semester, Western Bank is often very quiet. Study spaces are located in-between sections of bookshelves, creating a quiet and withdrawn atmosphere. On the downside, this does make it seem like a maze.
+
 [^1]: Source: [the UoS Wikipedia article](https://en.wikipedia.org/wiki/University_of_Sheffield)
+[^2]: Source: [the Western Bank Library Wikipedia article](https://en.wikipedia.org/wiki/Western_Bank_Library)
