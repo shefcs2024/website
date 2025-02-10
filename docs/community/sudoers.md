@@ -24,7 +24,7 @@ Anyone under the School of Computer Science is welcome to apply to become a Sudo
 
 <div markdown>
 
-![Image title](/assets/images/people/jack-gledhill.png){ width=150 }
+![Image title](assets/images/people/jack-gledhill.png){ width=150 }
 /// caption
 [Jack Gledhill](https://github.com/Jack-Gledhill)
 ///
@@ -33,7 +33,7 @@ Anyone under the School of Computer Science is welcome to apply to become a Sudo
 
 <div markdown>
 
-![Image title](/assets/images/people/placeholder.png){ width=150 }
+![Image title](assets/images/people/placeholder.png){ width=150 }
 /// caption
 [Oliver Goodwin-Day](https://github.com/)
 ///
@@ -42,7 +42,7 @@ Anyone under the School of Computer Science is welcome to apply to become a Sudo
 
 <div markdown>
 
-![Image title](/assets/images/people/placeholder.png){ width=150 }
+![Image title](assets/images/people/placeholder.png){ width=150 }
 /// caption
 [Harry Clayton](https://github.com/mrmounment)
 ///
