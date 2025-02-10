@@ -8,7 +8,7 @@ The [Year Group Discord](index.md) is ran by a handful of volunteers known colle
 - Alerting users to important changes in a timely manner
 
 !!! note
-    The Sudoers are not affiliated with or regulated by the Students' Union, School of Computer Science, Faculty of Engineering or the University in any way. We do not receive any kind of funding, and any costs we pay are out of our own pockets.
+The Sudoers are not affiliated with or regulated by the Students' Union, School of Computer Science, Faculty of Engineering or the University in any way. We do not receive any kind of funding, and any costs we pay are out of our own pockets.
 
 ## Constitution
 
@@ -35,7 +35,7 @@ Anyone under the School of Computer Science is welcome to apply to become a Sudo
 
 ![Image title](assets/images/people/placeholder.png){ width=150 }
 /// caption
-[Oliver Goodwin-Day](https://github.com/)
+[Oli GD](https://github.com/OGD311)
 ///
 
 </div>
